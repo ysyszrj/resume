@@ -29,7 +29,7 @@ coverage
 build/Release
 
 # Dependency directories
-node_modules
+../node_modules/.npminstall/gulp-util/3.0.7/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules
 jspm_packages
 
 # Optional npm cache directory
