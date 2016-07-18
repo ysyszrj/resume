@@ -8,8 +8,16 @@
       "blog": "http://www.jianshu.com/users/6086e1fe9958/latest_articles",
       "my_page": ""
     },
-    "links": {
-    },
+    "links": [
+      {
+        "name": "pdf",
+        "link": ""
+      },
+      {
+        "name": "word",
+        "link": ""
+      }
+    ],
     "education": [
       {
         "type": "master",
