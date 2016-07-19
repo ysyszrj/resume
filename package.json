@@ -12,6 +12,7 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
-    "vue": "^1.0.26"
+    "vue": "^1.0.26",
+    "webpack": "^1.13.1"
   }
 }

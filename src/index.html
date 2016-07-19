@@ -2,11 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="less/index.css">
     <title>Title</title>
-    <script src="../node_modules/vue/dist/vue.js"></script>
 </head>
 <body>
+<main id="app" class="container">
+    <header>
+        <section class="title">
+            <h1 >{{resume.name}}</h1>
+            <h2 >{{resume.job}}</h2>
+        </section>
+        <address>
+            <ul class="contact">
+                <li class="contact_{{item.type}}" v-for="item in resume.contacts">
+                    <a href="{{item.link}}">{{item.type}}</a>
+                </li>
+            </ul>
+        </address>
+    </header>
+    <article class="educations">
+        <section class="education" v-for="item in resume.education" >
+            {{ item.name}}
+        </section>
+    </article>
+    <article class="projects">
+        <section class="project" v-for="item in resume.projects"></section>
+    </article>
 
-
+</main>
+<script src="../bin/app.bundle.js"></script>
 </body>
 </html>
