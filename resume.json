@@ -5,6 +5,10 @@
     "job": "前端工程师",
     "contacts": [
       {
+        "type":"e-mail",
+        "link":"ysyszrj@126.com"
+      },
+      {
         "type": "github",
         "link": "https://github.com/ysyszrj"
       },
@@ -33,7 +37,8 @@
         "name": "浙江大学",
         "major": "计算机科学与技术",
         "start": "2014",
-        "end": "2017"
+        "end": "2017",
+        "lab":"计算机辅助设计与图形学国家重点实验室"
       },
       {
         "type": "undergraduate",

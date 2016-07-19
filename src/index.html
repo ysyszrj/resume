@@ -20,14 +20,27 @@
             </ul>
         </address>
     </header>
-    <article class="educations">
-        <section class="education" v-for="item in resume.education" >
-            {{ item.name}}
-        </section>
-    </article>
-    <article class="projects">
-        <section class="project" v-for="item in resume.projects"></section>
-    </article>
+    <div class="content">
+        <article class="educations">
+            <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">教育经历</span><span class="sec-title-en">Education</span></h3></div>
+            <div class="timeline-wrapper">
+
+                <section class="sec-content timeline" v-for="item in resume.education" >
+                    <time class="timeline-title">
+                        {{item.start}} ~ {{item.end}}
+                    </time>
+                    <span class="education-name">{{ item.name}} </span>
+                    <br>
+                    <span class="education-major">{{item.major}}</span>
+                </section>
+            </div>
+
+        </article>
+        <article class="projects">
+            <section class="project" v-for="item in resume.projects"></section>
+        </article>
+    </div>
+
 
 </main>
 <script src="../bin/app.bundle.js"></script>

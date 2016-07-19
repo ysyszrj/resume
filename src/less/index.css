@@ -31,25 +31,25 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 h1 {
-  font-size: 72px;
+  font-size: 4.5rem;
 }
 h2 {
-  font-size: 20.8px;
+  font-size: 1.3rem;
 }
 h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 h4 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 h5 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .container {
   background-color: white;
@@ -75,7 +75,7 @@ strong {
 }
 .lte-ie8 .lte-ie8-comment-wrapper p {
   text-align: center;
-  font-size: 32px;
+  font-size: 2rem;
   margin-top: 25%;
   display: block;
 }
@@ -241,7 +241,7 @@ header {
   color: white;
 }
 .title {
-  float: right;
+  float: left;
   text-align: right;
   margin: 0;
 }
@@ -269,6 +269,7 @@ header {
   margin: 0;
 }
 address {
+  float: right;
   overflow-y: hidden;
   zoom: 1;
 }
@@ -288,7 +289,7 @@ header .contact li {
   list-style-type: none;
   font-style: normal;
   line-height: 1.4;
-  font-size: 18px;
+  font-size: 1.125rem;
   word-break: break-all;
 }
 header a:link,
@@ -299,25 +300,10 @@ header a:hover,
 header a:active {
   color: #A3D3D1;
 }
-.contact-phone {
-  padding-left: 28px;
+.contact_e-mail {
+  padding-left: calc(12px + 1rem);
 }
-.contact-phone::before {
-  font-family: FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  content: "\f095";
-  width: 28px;
-  margin-left: -28px;
-  display: inline-block;
-}
-.contact-email {
-  padding-left: 28px;
-}
-.contact-email::before {
+.contact_e-mail::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -325,14 +311,14 @@ header a:active {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f0e0";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
-.contact-github {
-  padding-left: 28px;
+.contact_github {
+  padding-left: calc(12px + 1rem);
 }
-.contact-github::before {
+.contact_github::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -340,29 +326,14 @@ header a:active {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f092";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
-.contact-sinaweibo {
-  padding-left: 28px;
+.contact_blog {
+  padding-left: calc(12px + 1rem);
 }
-.contact-sinaweibo::before {
-  font-family: FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  content: "\f18a";
-  width: 28px;
-  margin-left: -28px;
-  display: inline-block;
-}
-.contact-blog {
-  padding-left: 28px;
-}
-.contact-blog::before {
+.contact_blog::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -370,23 +341,23 @@ header a:active {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f09e";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
-.contact-wechat {
-  padding-left: 28px;
+.contact_my_page {
+  padding-left: calc(12px + 1rem);
 }
-.contact-wechat::before {
+.contact_my_page::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f1d7";
-  width: 28px;
-  margin-left: -28px;
+  content: "\f1ea";
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
 footer {
@@ -408,12 +379,12 @@ section {
   zoom: 1;
 }
 .sec-title-ch {
-  font-size: 20px;
+  font-size: 1.25rem;
   float: left;
   font-weight: bold;
 }
 .sec-title-en {
-  font-size: 16px;
+  font-size: 1rem;
   float: left;
   clear: left;
   color: #008080;
@@ -478,13 +449,14 @@ section {
   padding-bottom: 14px;
 }
 .timeline-title {
+  display: block;
   margin: 0 0 0 -26px;
   padding: 3px 10px 3px 26px;
   color: white;
   background-color: #333;
   border-radius: 6px;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.33;
   overflow-y: hidden;
   zoom: 1;
@@ -534,7 +506,7 @@ section {
   font-size: inherit;
 }
 .education-name {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
@@ -545,14 +517,14 @@ section {
   margin: 0;
   padding: 0;
 }
-.education .sec-title-wrapper::before {
+.educations .sec-title-wrapper::before {
   content: "\f02d";
 }
-.education-undergraduate.timeline-item::before {
+.education.timeline-item::before {
   content: "\f02e";
 }
 .education-major {
-  padding-left: 28px;
+  padding-left: calc(12px + 1rem);
 }
 .education-major::before {
   font-family: FontAwesome;
@@ -562,12 +534,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f19d";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
 .education-honor {
-  padding-left: 28px;
+  padding-left: calc(12px + 1rem);
 }
 .education-honor::before {
   font-family: FontAwesome;
@@ -577,8 +549,8 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f091";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
 .language .sec-content {
@@ -589,7 +561,7 @@ section {
   padding: 0;
 }
 .language-cert-wrapper {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 5px;
   line-height: initial;
   overflow-y: hidden;
@@ -622,7 +594,7 @@ section {
   content: "\f086";
 }
 .language-desc-item {
-  padding-left: 28px;
+  padding-left: calc(12px + 1rem);
 }
 .language-desc-item::before {
   font-family: FontAwesome;
@@ -632,8 +604,8 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f005";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
 .experience-place,
@@ -646,7 +618,7 @@ section {
 }
 .experience-position,
 .experience-project-name {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
@@ -662,7 +634,7 @@ section {
   border-radius: 6px;
   padding: 1px 10px;
   background-color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 10px;
 }
 .experience-project-link:link,
@@ -684,7 +656,7 @@ section {
   content: "\f135";
 }
 .experience-task {
-  padding-left: 28px;
+  padding-left: calc(12px + 1rem);
 }
 .experience-task::before {
   font-family: FontAwesome;
@@ -694,12 +666,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f013";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
 .experience-project-link {
-  padding-left: 24px;
+  padding-left: calc(10px + 0.875rem);
 }
 .experience-project-link::before {
   font-family: FontAwesome;
@@ -709,8 +681,8 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f0c1";
-  width: 19px;
-  margin-left: -19px;
+  width: calc(5px + 0.875rem);
+  margin-left: calc(-5px - 0.875rem);
   display: inline-block;
 }
 .skills-item-description {
@@ -723,7 +695,7 @@ section {
   margin: 0;
 }
 .skills-item-summary {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 10px 0 5px 0;
   font-weight: bold;
 }
@@ -747,7 +719,7 @@ section {
   content: "\f085";
 }
 .skills-item-description {
-  padding-left: 28px;
+  padding-left: calc(12px + 1rem);
 }
 .skills-item-description::before {
   font-family: FontAwesome;
@@ -757,8 +729,8 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f005";
-  width: 28px;
-  margin-left: -28px;
+  width: calc(12px + 1rem);
+  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
 aside {

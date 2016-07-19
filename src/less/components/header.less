@@ -13,7 +13,7 @@ header {
 }
 
 .title {
-    float: right;
+    float: left;
     text-align: right;
     margin: 0;
 
@@ -44,6 +44,7 @@ header {
 }
 
 address {
+    float: right;
     .float-container();
 }
 
@@ -71,12 +72,11 @@ header a:link, header a:visited {
 }
 
 header a:hover, header a:active {
-    color: @secondary-light-color;;
+    color: @secondary-light-color;
 }
 
-.set-li-icon(contact-phone, @fa-var-phone);
-.set-li-icon(contact-email, @fa-var-envelope);
-.set-li-icon(contact-github, @fa-var-github-square);
-.set-li-icon(contact-sinaweibo, @fa-var-weibo);
-.set-li-icon(contact-blog, @fa-var-rss);
-.set-li-icon(contact-wechat, @fa-var-wechat);
+
+.set-li-icon(contact_e-mail, @fa-var-envelope);
+.set-li-icon(contact_github, @fa-var-github-square);
+.set-li-icon(contact_blog, @fa-var-rss);
+.set-li-icon(contact_my_page, @fa-var-newspaper-o);

@@ -1,4 +1,9 @@
 @font-face {
+  @fa-font-path: "static/fonts";
+  @fa-font-size-base:   14px;
+  @fa-css-prefix:       fa;
+  @fa-version:          "4.3.0";
+  @fa-font-size-base:   14px;
   font-family: 'FontAwesome';
   src: url('@{fa-font-path}/fontawesome-webfont.eot?v=@{fa-version}');
   src: url('@{fa-font-path}/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
@@ -45,28 +50,28 @@
 
 .set-li-icon(@li-name, @content) {
   .@{li-name} {
-    padding-left: @padding-base-horizontal + @font-size-base;
+    padding-left: calc( ~"@{padding-base-horizontal} + @{font-size-base}" );
   }
 
   .@{li-name}::before {
     .fa();
     content: @content;
-    width: @padding-base-horizontal + @font-size-base;
-    margin-left: -@padding-base-horizontal - @font-size-base;
+    width: calc( ~"@{padding-base-horizontal} + @{font-size-base}" );
+    margin-left: calc( ~"-@{padding-base-horizontal} - @{font-size-base}");
     display: inline-block;
   }
 }
 
 .set-small-li-icon(@li-name, @content) {
   .@{li-name} {
-    padding-left: @padding-small-horizontal + @font-size-small;
+    padding-left: calc( ~"@{padding-small-horizontal} + @{font-size-small}" );
   }
 
   .@{li-name}::before {
     .fa();
     content: @content;
-    width: @padding-xs-horizontal + @font-size-small;
-    margin-left: -@padding-xs-horizontal - @font-size-small;
+    width: calc( ~"@{padding-xs-horizontal} + @{font-size-small}" );
+    margin-left: calc( ~"-@{padding-xs-horizontal} - @{font-size-small}" );
     display: inline-block;
   }
 }
