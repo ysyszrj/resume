@@ -3,11 +3,20 @@
     "resume_title": "朱熔洁 - 个人简历",
     "name": "朱熔洁",
     "job": "前端工程师",
-    "contact": {
-      "github": "https://github.com/ysyszrj",
-      "blog": "http://www.jianshu.com/users/6086e1fe9958/latest_articles",
-      "my_page": ""
-    },
+    "contacts": [
+      {
+        "type": "github",
+        "link": "https://github.com/ysyszrj"
+      },
+      {
+        "type":"blog",
+        "link": "http://www.jianshu.com/users/6086e1fe9958/latest_articles"
+      },
+      {
+        "type":"my_page",
+        "link": ""
+      }
+    ],
     "links": [
       {
         "name": "pdf",
