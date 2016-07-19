@@ -44,3 +44,5 @@ jspm_packages
 .idea
 out
 gen
+
+node_modules
