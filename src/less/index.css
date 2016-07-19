@@ -235,6 +235,7 @@ dl {
 }
 header {
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
   padding-bottom: 6px;
   background-color: #333;
@@ -271,6 +272,7 @@ header {
 address {
   float: right;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
 }
 header .contact {
@@ -369,6 +371,7 @@ section {
 }
 .sec-title-wrapper {
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
 }
 .sec-title {
@@ -376,6 +379,7 @@ section {
   padding: 0;
   margin: 0 0 0 10px;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
 }
 .sec-title-ch {
@@ -412,26 +416,11 @@ section {
 }
 .timeline-wrapper {
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
   margin-top: -29px;
 }
 .timeline-wrapper::after {
-  font-family: FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  background-color: #333;
-  color: white;
-  border-radius: 100%;
-  float: left;
-  width: 14px;
-  height: 14px;
-  padding: 0;
-  text-align: center;
-  line-height: 14px;
-  font-size: 14px;
   content: "";
   margin-left: 17px;
   margin-top: -7px;
@@ -439,7 +428,6 @@ section {
 .timeline {
   padding-top: 42px;
   padding-left: 26px;
-  border-left: 4px solid #333;
   margin: 0 0 0 22px;
 }
 .timeline li {
@@ -453,12 +441,13 @@ section {
   margin: 0 0 0 -26px;
   padding: 3px 10px 3px 26px;
   color: white;
-  background-color: #333;
+  background-color: #A3D3D1;
   border-radius: 6px;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.33;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
 }
 .timeline-item::before {
@@ -565,6 +554,7 @@ section {
   margin-bottom: 5px;
   line-height: initial;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
 }
 .language-cert-type {
@@ -749,6 +739,7 @@ aside {
     top: 0;
     transform: none;
     overflow-y: hidden;
+    overflow-x: hidden;
     zoom: 1;
   }
 }

@@ -34,6 +34,7 @@
     "education": [
       {
         "type": "master",
+        "type_ch":"硕士研究生",
         "name": "浙江大学",
         "major": "计算机科学与技术",
         "start": "2014",
@@ -42,6 +43,7 @@
       },
       {
         "type": "undergraduate",
+        "type_ch":" 本 科 ",
         "name": "江南大学",
         "major": "数字媒体技术",
         "start": "2010",
