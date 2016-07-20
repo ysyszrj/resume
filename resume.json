@@ -50,11 +50,15 @@
         "end": "2014"
       }
     ],
-    "project": [
+    "projects": [
       {
         "type": "project",
         "title": "title1",
-        "description": "项目描述",
+        "start":"2016.1",
+        "end":"2016.5",
+        "description": [
+          "项目描述"
+        ],
         "tags": [
           "tag1",
           "tag2"
@@ -63,11 +67,32 @@
       {
         "type": "project",
         "title": "title2",
-        "description": "项目描述",
+        "start": "",
+        "end":"",
+        "description": [
+          "项目描述",
+          "项目描述2"
+        ],
         "tags": [
           "tag1",
           "tag2"
         ]
+      }
+    ],
+    "skills":[
+      {
+        "type":"front-end",
+        "title":"前端",
+        "classes":[
+          {
+            "class": "技能种类",
+            "description":["描述"]
+          },{
+            "class":"技能种类",
+            "description":["描述"]
+          }
+        ]
+
       }
     ]
   }

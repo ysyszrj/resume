@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="less/index.css">
-    <title>Title</title>
+    <title>简历</title>
 </head>
 <body>
 <main id="app" class="container">
-    <header>
+    <header class="row">
         <section class="title">
             <h1 >{{resume.name}}</h1>
             <h2 >{{resume.job}}</h2>
@@ -20,30 +21,68 @@
             </ul>
         </address>
     </header>
-    <div class="content">
+    <div class="content row">
         <article class="educations">
             <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">教育经历</span><span class="sec-title-en">Education</span></h3></div>
-            <div class="timeline-wrapper">
+            <div class="sec-content">
 
-                <section class="sec-content timeline" v-for="item in resume.education" >
+                <section class="sec-part bi-part" v-for="item in resume.education" >
                     <time class="timeline-title">
-                        {{item.type_ch}} &nbsp; &nbsp; {{item.start}} ~ {{item.end}}
+                        &nbsp; &nbsp; {{item.start}} ~ {{item.end}}&nbsp; &nbsp;{{item.type_ch}}
                     </time>
-                    <span class="education-name">{{ item.name}} </span>
-                    <br>
-                    <span class="education-major">{{item.major}}</span>
-                    <span class=""></span>
+                    <div class="sec-content">
+                        <span class="education-name">{{ item.name}} </span>
+
+                        <span class="education-major">{{item.major}}</span>
+                        <span class=""></span>
+                    </div>
                 </section>
             </div>
+        </article>
 
-        </article>
         <article class="projects">
-            <section class="project" v-for="item in resume.projects"></section>
+            <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">项目经历</span><span class="sec-title-en">Project</span></h3></div>
+            <div class="sec-content">
+                <section class="sec-part col-md-12" v-for="item in resume.projects">
+                    <time class="timeline-title">
+                        &nbsp; &nbsp; {{item.start}} ~ {{item.end}}
+                    </time>
+                    <dl class="timeline-content">
+                        <dt class="item-summary">{{item.title}}</dt>
+                        <dd class="experience-task" v-for="des in item.description">
+                            {{des}}
+                        </dd>
+                    </dl>
+                    <span v-for="tag in item.tags">
+                        {{item.tags}}
+                    </span>
+                </section>
+            </div>
         </article>
+
+        <article class="skills">
+            <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">个人技能</span><span class="sec-title-en">Skills</span></h3></div>
+            <div class="sec-content">
+                <section class="sec-part col-md-12" v-for="skill in resume.skills">
+                    <time class="timeline-title">
+                        {{skill.title}}
+                    </time>
+                    <dl class="timeline-content" v-for="class in skill.classes">
+                        <dt class="item-summary">{{class.class}}</dt>
+                        <dd class="skills-item-description" v-for="des in class.description">
+                            {{des}}
+                        </dd>
+                    </dl>
+                </section>
+            </div>
+        </article>
+
     </div>
 
 
 </main>
+<footer>This resume is generated with Webpack, Less and Vue.js by ysyszrj's resume generator.
+</footer>
 <script src="../bin/app.bundle.js"></script>
 </body>
 </html>

@@ -58,4 +58,16 @@ header, .content {
   @media print {
     display: none;
   }
-} 
+}
+
+.bi-part {
+  float: left;
+
+  @media screen and (min-width: @screen-md-min) {
+
+    width: 50%;
+  }
+  @media screen and (max-width: @screen-sm-max) {
+    width: 100%;
+  }
+}

@@ -9,6 +9,8 @@
 .timeline-wrapper {
     .float-container();
     margin-top: -@timeline-icon-overlap;
+    margin-left: @timeline-wrapper-margin;
+    margin-right: @timeline-wrapper-margin;
 }
 
 .timeline-wrapper::after {
@@ -23,7 +25,7 @@
     padding-top: @timeline-icon-overlap + @timeline-item-size / 2;
     padding-left: @timeline-item-size;
     //border-left: @timeline-line-width solid @text-color;
-    margin: 0 0 0 @timeline-icon-radius;
+    //margin: 0 0 0 @timeline-icon-radius;
 }
 
 .timeline li {
@@ -36,7 +38,6 @@
 
 .timeline-title {
     display: block;
-    margin: 0 0 0 -@timeline-item-size;
     padding: @timeline-item-padding/2 @padding-small-horizontal @timeline-item-padding/2 @timeline-item-size;
     color: white;
     background-color: @time-line-color;
@@ -46,6 +47,7 @@
     // hack: make floating boxes align vertically
     line-height: @line-height-large;
     .float-container();
+    margin-bottom: @timeline-title-padding;
 }
 
 .timeline-item::before {
