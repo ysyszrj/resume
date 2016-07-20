@@ -58,14 +58,23 @@ section {
 
 .sec-content{
     .clearfix();
-    @media screen and (max-width: @screen-xs-max ) {
+
+
+}
+.subsec-content{
+    @media screen and (max-width: @screen-sm-max ) {
         padding-left: @sec-content-padding-sm;
         padding-right: @sec-content-padding-sm;
+    }
+
+    @media screen and (min-width: @screen-md-min ) {
+        padding-left: @sec-content-padding-md;
+        padding-right: @sec-content-padding-md;
     }
 }
 
 .sec-part{
-    padding-top: @timeline-icon-overlap + @timeline-item-size / 2;
+    padding-top: @sec-botton-padding;
     padding-left: @sec-timeline-padding;
     padding-right: @sec-timeline-padding;
     padding-bottom: @sec-botton-padding;

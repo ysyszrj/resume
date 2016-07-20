@@ -16,7 +16,6 @@ header {
     float: left;
     text-align: right;
     margin: 0;
-
     @media screen and (max-width: @screen-xs-max) {
       float: none;
       text-align: center;
@@ -46,6 +45,7 @@ header {
 address {
     float: right;
     .float-container();
+    margin-top: @padding-huge-vertical;
 }
 
 header .contact {
@@ -75,7 +75,10 @@ header a:hover, header a:active {
     color: @secondary-light-color;
 }
 
-
+.title, address{
+    margin-left: @padding-huge-horizontal;
+    margin-right: @padding-huge-horizontal;
+}
 .set-li-icon(contact_e-mail, @fa-var-envelope);
 .set-li-icon(contact_github, @fa-var-github-square);
 .set-li-icon(contact_blog, @fa-var-rss);

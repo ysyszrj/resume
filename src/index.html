@@ -30,9 +30,8 @@
                     <time class="timeline-title">
                         &nbsp; &nbsp; {{item.start}} ~ {{item.end}}&nbsp; &nbsp;{{item.type_ch}}
                     </time>
-                    <div class="sec-content">
+                    <div class="subsec-content">
                         <span class="education-name">{{ item.name}} </span>
-
                         <span class="education-major">{{item.major}}</span>
                         <span class=""></span>
                     </div>
@@ -43,19 +42,23 @@
         <article class="projects">
             <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">项目经历</span><span class="sec-title-en">Project</span></h3></div>
             <div class="sec-content">
-                <section class="sec-part col-md-12" v-for="item in resume.projects">
+                <section class="sec-part" v-for="item in resume.projects">
                     <time class="timeline-title">
                         &nbsp; &nbsp; {{item.start}} ~ {{item.end}}
                     </time>
-                    <dl class="timeline-content">
-                        <dt class="item-summary">{{item.title}}</dt>
-                        <dd class="experience-task" v-for="des in item.description">
-                            {{des}}
-                        </dd>
-                    </dl>
-                    <span v-for="tag in item.tags">
-                        {{item.tags}}
-                    </span>
+                    <div class="subsec-content">
+                        <dl>
+                            <dt class="item-summary">{{item.title}}</dt>
+                            <dd class="experience-task" v-for="des in item.description">
+                                {{des}}
+                            </dd>
+                        </dl>
+                        <span v-for="tag in item.tags">
+                        {{tag}}
+                        </span>
+                    </div>
+
+
                 </section>
             </div>
         </article>
@@ -63,16 +66,19 @@
         <article class="skills">
             <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">个人技能</span><span class="sec-title-en">Skills</span></h3></div>
             <div class="sec-content">
-                <section class="sec-part col-md-12" v-for="skill in resume.skills">
+                <section class="sec-part" v-for="skill in resume.skills">
                     <time class="timeline-title">
                         {{skill.title}}
                     </time>
-                    <dl class="timeline-content" v-for="class in skill.classes">
-                        <dt class="item-summary">{{class.class}}</dt>
-                        <dd class="skills-item-description" v-for="des in class.description">
-                            {{des}}
-                        </dd>
-                    </dl>
+                    <div class="subsec-content">
+                        <dl class="" v-for="class in skill.classes">
+                            <dt class="item-summary">{{class.class}}</dt>
+                            <dd class="skills-item-description" v-for="des in class.description">
+                                {{des}}
+                            </dd>
+                        </dl>
+                    </div>
+
                 </section>
             </div>
         </article>
