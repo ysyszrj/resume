@@ -808,7 +808,7 @@ dt {
   line-height: 1.33;
 }
 .tag {
-  background-color: green;
+  background-color: #008080;
   color: white;
   padding: 0.4rem;
   border-radius: 0.4rem;
