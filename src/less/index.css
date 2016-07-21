@@ -84,6 +84,7 @@ ol,
 dl {
   line-height: 1.42857143;
   padding-left: 0;
+  margin-bottom: 0rem;
 }
 article {
   padding-bottom: 2rem;
@@ -323,7 +324,7 @@ header a:active {
 }
 @media screen and (min-width: 992px) {
   .contact_e-mail::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 .contact_github::before {
@@ -338,7 +339,7 @@ header a:active {
 }
 @media screen and (min-width: 992px) {
   .contact_github::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 .contact_blog::before {
@@ -353,7 +354,7 @@ header a:active {
 }
 @media screen and (min-width: 992px) {
   .contact_blog::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 .contact_works::before {
@@ -368,15 +369,12 @@ header a:active {
 }
 @media screen and (min-width: 992px) {
   .contact_works::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 footer {
   text-align: center;
   margin: 30px 6px;
-}
-section {
-  margin-bottom: 1rem;
 }
 .sec-title-wrapper {
   display: flex;
@@ -449,6 +447,9 @@ section {
 .sec-content:after {
   clear: both;
 }
+.subsec-content {
+  padding-bottom: 1.5rem;
+}
 @media screen and (max-width: 991px) {
   .subsec-content {
     padding-left: 1.5rem;
@@ -465,7 +466,6 @@ section {
   padding-top: 1rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  padding-bottom: 1rem;
 }
 .timeline-wrapper {
   overflow-y: hidden;
@@ -549,9 +549,11 @@ section {
   margin: 10px 0 5px 0;
 }
 .education-major,
-.education-honor {
+.education-honor,
+.education-college,
+.education-lab {
   list-style-type: none;
-  line-height: 1.42857143;
+  line-height: 1.85714286;
   margin: 0;
   padding: 0;
 }
@@ -560,6 +562,36 @@ section {
 }
 .education.timeline-item::before {
   content: "\f02e";
+}
+.education-college::before {
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f19c";
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-college::before {
+    width: 1.3rem;
+  }
+}
+.education-lab::before {
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f0c0";
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-lab::before {
+    width: 1.3rem;
+  }
 }
 .education-major::before {
   font-family: FontAwesome;
@@ -573,7 +605,7 @@ section {
 }
 @media screen and (min-width: 992px) {
   .education-major::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 .education-honor::before {
@@ -588,7 +620,7 @@ section {
 }
 @media screen and (min-width: 992px) {
   .education-honor::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 .language .sec-content {
@@ -644,7 +676,7 @@ section {
 }
 @media screen and (min-width: 992px) {
   .language-desc-item::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 .experience-place,
@@ -706,7 +738,7 @@ section {
 }
 @media screen and (min-width: 992px) {
   .experience-task::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
 }
 .experience-project-link {
@@ -732,11 +764,6 @@ section {
 }
 .skills-item-description {
   margin: 0;
-}
-.skills-item-summary {
-  font-size: 1.125rem;
-  margin: 10px 0 5px 0;
-  font-weight: bold;
 }
 .skills-miscellaneous {
   margin-top: 10px;
@@ -769,8 +796,24 @@ section {
 }
 @media screen and (min-width: 992px) {
   .skills-item-description::before {
-    width: 0.3rem;
+    width: 1.3rem;
   }
+}
+.item-summary {
+  font-size: 1.125rem;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+}
+dt {
+  line-height: 1.33;
+}
+.tag {
+  background-color: green;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  line-height: 2.62857143rem;
+  margin-right: 1rem;
 }
 aside {
   right: 0;

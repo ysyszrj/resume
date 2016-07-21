@@ -4,14 +4,16 @@
     margin: @padding-large-vertical 0 @padding-small-vertical 0;
 }
 
-.education-major, .education-honor {
+.education-major, .education-honor, .education-college,.education-lab {
     list-style-type: none;
-    line-height: @line-height-base;
+    line-height: @line-height-base*1.3;
     margin: 0;
     padding: 0;
 }
 
 .set-section-icon(educations, @fa-var-book);
 .set-timeline-icon(education, @fa-var-bookmark);
+.set-li-icon(education-college, @fa-var-institution);
+.set-li-icon(education-lab,@fa-var-group);
 .set-li-icon(education-major, @fa-var-graduation-cap);
 .set-li-icon(education-honor, @fa-var-trophy);
