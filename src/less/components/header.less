@@ -51,8 +51,8 @@ address {
 header .contact {
     float: left;
     margin: 0;
-    padding-left: @padding-large-horizontal;
-    @media print or (max-width: @screen-xs-max) {
+    //padding-left: @padding-large-horizontal;
+    @media print and (min-width: @screen-md-min) {
       float: none;
       margin-top: @padding-large-vertical;
       padding-left: @padding-xs-horizontal;
@@ -65,6 +65,9 @@ header .contact li {
     line-height: 1.4;
     font-size: @font-size-medium;
     word-break: break-all;
+    @media print and(max-width: @screen-sm-max){
+         width: 25%;
+    }
 }
 
 header a:link, header a:visited {
@@ -75,11 +78,11 @@ header a:hover, header a:active {
     color: @secondary-light-color;
 }
 
-.title, address{
-    margin-left: @padding-huge-horizontal;
-    margin-right: @padding-huge-horizontal;
-}
+//.title, address{
+//    margin-left: @padding-huge-horizontal;
+//    margin-right: @padding-huge-horizontal;
+//}
 .set-li-icon(contact_e-mail, @fa-var-envelope);
 .set-li-icon(contact_github, @fa-var-github-square);
 .set-li-icon(contact_blog, @fa-var-rss);
-.set-li-icon(contact_my_page, @fa-var-newspaper-o);
+.set-li-icon(contact_works, @fa-var-newspaper-o);

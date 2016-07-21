@@ -13,13 +13,18 @@
             <h1 >{{resume.name}}</h1>
             <h2 >{{resume.job}}</h2>
         </section>
-        <address>
-            <ul class="contact">
+
+            <div>
+                <address>
+                <ul class="contact">
                 <li class="contact_{{item.type}}" v-for="item in resume.contacts">
                     <a href="{{item.link}}">{{item.type}}</a>
                 </li>
             </ul>
-        </address>
+                    </address>
+            </div>
+
+
     </header>
     <div class="content row">
         <article class="educations">

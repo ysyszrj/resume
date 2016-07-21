@@ -9,15 +9,15 @@
         "link":"ysyszrj@126.com"
       },
       {
-        "type": "github",
-        "link": "https://github.com/ysyszrj"
-      },
-      {
         "type":"blog",
         "link": "http://www.jianshu.com/users/6086e1fe9958/latest_articles"
       },
       {
-        "type":"my_page",
+        "type": "github",
+        "link": "https://github.com/ysyszrj"
+      },
+      {
+        "type":"works",
         "link": ""
       }
     ],
