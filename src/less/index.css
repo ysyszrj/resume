@@ -31,25 +31,25 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 h1 {
-  font-size: 72px;
+  font-size: 4.5rem;
 }
 h2 {
-  font-size: 20.8px;
+  font-size: 1.3rem;
 }
 h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 h4 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 h5 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 h6 {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .container {
   background-color: white;
@@ -75,7 +75,7 @@ strong {
 }
 .lte-ie8 .lte-ie8-comment-wrapper p {
   text-align: center;
-  font-size: 32px;
+  font-size: 2rem;
   margin-top: 25%;
   display: block;
 }
@@ -83,6 +83,11 @@ ul,
 ol,
 dl {
   line-height: 1.42857143;
+  padding-left: 0;
+  margin-bottom: 0rem;
+}
+article {
+  padding-bottom: 2rem;
 }
 * {
   box-sizing: border-box;
@@ -235,13 +240,14 @@ dl {
 }
 header {
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
   padding-bottom: 6px;
   background-color: #333;
   color: white;
 }
 .title {
-  float: right;
+  float: left;
   text-align: right;
   margin: 0;
 }
@@ -269,15 +275,17 @@ header {
   margin: 0;
 }
 address {
+  float: right;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
+  margin-top: 1rem;
 }
 header .contact {
   float: left;
   margin: 0;
-  padding-left: 16px;
 }
-@media print or (max-width: 767px) {
+@media print and (min-width: 992px) {
   header .contact {
     float: none;
     margin-top: 10px;
@@ -288,8 +296,13 @@ header .contact li {
   list-style-type: none;
   font-style: normal;
   line-height: 1.4;
-  font-size: 18px;
+  font-size: 1.125rem;
   word-break: break-all;
+}
+@media print and (max-width: 991px) {
+  header .contact li {
+    width: 25%;
+  }
 }
 header a:link,
 header a:visited {
@@ -299,25 +312,7 @@ header a:hover,
 header a:active {
   color: #A3D3D1;
 }
-.contact-phone {
-  padding-left: 28px;
-}
-.contact-phone::before {
-  font-family: FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  content: "\f095";
-  width: 28px;
-  margin-left: -28px;
-  display: inline-block;
-}
-.contact-email {
-  padding-left: 28px;
-}
-.contact-email::before {
+.contact_e-mail::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -325,14 +320,14 @@ header a:active {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f0e0";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
 }
-.contact-github {
-  padding-left: 28px;
+@media screen and (min-width: 992px) {
+  .contact_e-mail::before {
+    width: 1.3rem;
+  }
 }
-.contact-github::before {
+.contact_github::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -340,29 +335,14 @@ header a:active {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f092";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
 }
-.contact-sinaweibo {
-  padding-left: 28px;
+@media screen and (min-width: 992px) {
+  .contact_github::before {
+    width: 1.3rem;
+  }
 }
-.contact-sinaweibo::before {
-  font-family: FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  content: "\f18a";
-  width: 28px;
-  margin-left: -28px;
-  display: inline-block;
-}
-.contact-blog {
-  padding-left: 28px;
-}
-.contact-blog::before {
+.contact_blog::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -370,50 +350,70 @@ header a:active {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f09e";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
 }
-.contact-wechat {
-  padding-left: 28px;
+@media screen and (min-width: 992px) {
+  .contact_blog::before {
+    width: 1.3rem;
+  }
 }
-.contact-wechat::before {
+.contact_works::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
-  content: "\f1d7";
-  width: 28px;
-  margin-left: -28px;
+  content: "\f1ea";
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .contact_works::before {
+    width: 1.3rem;
+  }
 }
 footer {
   text-align: center;
   margin: 30px 6px;
 }
-section {
-  margin-bottom: 14px;
-}
 .sec-title-wrapper {
-  overflow-y: hidden;
-  zoom: 1;
+  display: flex;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.sec-title-wrapper:before,
+.sec-title-wrapper:after {
+  content: " ";
+  display: table;
+}
+.sec-title-wrapper:after {
+  clear: both;
+}
+@media screen and (max-width: 767px) {
+  .sec-title-wrapper {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sec-title-wrapper {
+    justify-content: flex-start;
+  }
 }
 .sec-title {
   float: left;
   padding: 0;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 1rem;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
 }
 .sec-title-ch {
-  font-size: 20px;
+  font-size: 1.25rem;
   float: left;
   font-weight: bold;
 }
 .sec-title-en {
-  font-size: 16px;
+  font-size: 1rem;
   float: left;
   clear: left;
   color: #008080;
@@ -439,28 +439,43 @@ section {
   font-size: 26px;
   content: "\f092";
 }
+.sec-content:before,
+.sec-content:after {
+  content: " ";
+  display: table;
+}
+.sec-content:after {
+  clear: both;
+}
+.subsec-content {
+  padding-bottom: 1.5rem;
+}
+@media screen and (max-width: 991px) {
+  .subsec-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .subsec-content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.sec-part {
+  padding-top: 1rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .timeline-wrapper {
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
   margin-top: -29px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .timeline-wrapper::after {
-  font-family: FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  background-color: #333;
-  color: white;
-  border-radius: 100%;
-  float: left;
-  width: 14px;
-  height: 14px;
-  padding: 0;
-  text-align: center;
-  line-height: 14px;
-  font-size: 14px;
   content: "";
   margin-left: 17px;
   margin-top: -7px;
@@ -468,8 +483,6 @@ section {
 .timeline {
   padding-top: 42px;
   padding-left: 26px;
-  border-left: 4px solid #333;
-  margin: 0 0 0 22px;
 }
 .timeline li {
   list-style-type: none;
@@ -478,16 +491,18 @@ section {
   padding-bottom: 14px;
 }
 .timeline-title {
-  margin: 0 0 0 -26px;
-  padding: 3px 10px 3px 26px;
+  display: block;
+  padding: 3px 1rem 3px 26px;
   color: white;
-  background-color: #333;
+  background-color: #A3D3D1;
   border-radius: 6px;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.33;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
+  margin-bottom: 1.5rem;
 }
 .timeline-item::before {
   font-family: FontAwesome;
@@ -514,11 +529,6 @@ section {
 .timeline-content {
   margin: 0;
 }
-@media (max-width: 767px) {
-  .timeline-content {
-    margin-left: -10px;
-  }
-}
 .progress {
   border-radius: 4px;
   background-color: #333;
@@ -527,32 +537,61 @@ section {
 .progress-bar {
   background-color: #008080;
   text-align: right;
-  padding-right: 10px;
+  padding-right: 1rem;
 }
 .progress-label {
   color: white;
   font-size: inherit;
 }
 .education-name {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
 .education-major,
-.education-honor {
+.education-honor,
+.education-college,
+.education-lab {
   list-style-type: none;
-  line-height: 1.42857143;
+  line-height: 1.85714286;
   margin: 0;
   padding: 0;
 }
-.education .sec-title-wrapper::before {
+.educations .sec-title-wrapper::before {
   content: "\f02d";
 }
-.education-undergraduate.timeline-item::before {
+.education.timeline-item::before {
   content: "\f02e";
 }
-.education-major {
-  padding-left: 28px;
+.education-college::before {
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f19c";
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-college::before {
+    width: 1.3rem;
+  }
+}
+.education-lab::before {
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f0c0";
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-lab::before {
+    width: 1.3rem;
+  }
 }
 .education-major::before {
   font-family: FontAwesome;
@@ -562,12 +601,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f19d";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
 }
-.education-honor {
-  padding-left: 28px;
+@media screen and (min-width: 992px) {
+  .education-major::before {
+    width: 1.3rem;
+  }
 }
 .education-honor::before {
   font-family: FontAwesome;
@@ -577,9 +616,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f091";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-honor::before {
+    width: 1.3rem;
+  }
 }
 .language .sec-content {
   margin: 10px 0 0 22px;
@@ -589,10 +631,11 @@ section {
   padding: 0;
 }
 .language-cert-wrapper {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 5px;
   line-height: initial;
   overflow-y: hidden;
+  overflow-x: hidden;
   zoom: 1;
 }
 .language-cert-type {
@@ -621,9 +664,6 @@ section {
 .language .sec-title-wrapper::before {
   content: "\f086";
 }
-.language-desc-item {
-  padding-left: 28px;
-}
 .language-desc-item::before {
   font-family: FontAwesome;
   font-size: inherit;
@@ -632,9 +672,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f005";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .language-desc-item::before {
+    width: 1.3rem;
+  }
 }
 .experience-place,
 .experience-project-type {
@@ -646,7 +689,7 @@ section {
 }
 .experience-position,
 .experience-project-name {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
@@ -660,10 +703,10 @@ section {
 }
 .experience-project-link {
   border-radius: 6px;
-  padding: 1px 10px;
+  padding: 1px 1rem;
   background-color: white;
-  font-size: 14px;
-  margin-left: 10px;
+  font-size: 0.875rem;
+  margin-left: 1rem;
 }
 .experience-project-link:link,
 .experience-project-link:visited {
@@ -683,9 +726,6 @@ section {
 .experience-project.timeline-item::before {
   content: "\f135";
 }
-.experience-task {
-  padding-left: 28px;
-}
 .experience-task::before {
   font-family: FontAwesome;
   font-size: inherit;
@@ -694,12 +734,15 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f013";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
 }
+@media screen and (min-width: 992px) {
+  .experience-task::before {
+    width: 1.3rem;
+  }
+}
 .experience-project-link {
-  padding-left: 24px;
+  padding-left: calc(1rem + 0.875rem);
 }
 .experience-project-link::before {
   font-family: FontAwesome;
@@ -709,8 +752,8 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f0c1";
-  width: 19px;
-  margin-left: -19px;
+  width: calc(5px + 0.875rem);
+  margin-left: calc(-5px - 0.875rem);
   display: inline-block;
 }
 .skills-item-description {
@@ -721,11 +764,6 @@ section {
 }
 .skills-item-description {
   margin: 0;
-}
-.skills-item-summary {
-  font-size: 18px;
-  margin: 10px 0 5px 0;
-  font-weight: bold;
 }
 .skills-miscellaneous {
   margin-top: 10px;
@@ -746,9 +784,6 @@ section {
 .skills-miscellaneous.timeline-item::before {
   content: "\f085";
 }
-.skills-item-description {
-  padding-left: 28px;
-}
 .skills-item-description::before {
   font-family: FontAwesome;
   font-size: inherit;
@@ -757,9 +792,28 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f005";
-  width: 28px;
-  margin-left: -28px;
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .skills-item-description::before {
+    width: 1.3rem;
+  }
+}
+.item-summary {
+  font-size: 1.125rem;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+}
+dt {
+  line-height: 1.33;
+}
+.tag {
+  background-color: #008080;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  line-height: 2.62857143rem;
+  margin-right: 1rem;
 }
 aside {
   right: 0;
@@ -777,6 +831,7 @@ aside {
     top: 0;
     transform: none;
     overflow-y: hidden;
+    overflow-x: hidden;
     zoom: 1;
   }
 }
@@ -824,7 +879,7 @@ aside a:active {
 }
 @media screen and (max-width: 767px) {
   .container {
-    padding: 5px 0;
+    padding: 0 0;
     margin-top: 0;
   }
 }
@@ -850,9 +905,19 @@ header,
 @media screen and (max-width: 767px) {
   header,
   .content {
-    padding: 30px 10px;
+    padding: 30px 1rem;
     margin-top: 0;
     margin-bottom: 5px;
+  }
+  address {
+    width: 100%;
+  }
+  address ul {
+    width: 100%;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 992px) {
@@ -883,6 +948,19 @@ header,
 @media print {
   .invisible-print {
     display: none;
+  }
+}
+.bi-part {
+  float: left;
+}
+@media screen and (min-width: 992px) {
+  .bi-part {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .bi-part {
+    width: 100%;
   }
 }
 @media print {

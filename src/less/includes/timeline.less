@@ -9,10 +9,12 @@
 .timeline-wrapper {
     .float-container();
     margin-top: -@timeline-icon-overlap;
+    margin-left: @timeline-wrapper-margin;
+    margin-right: @timeline-wrapper-margin;
 }
 
 .timeline-wrapper::after {
-    .fa-icon(@timeline-end-size, 0, @text-color);
+    //.fa-icon(@timeline-end-size, 0, @text-color);
 
     content: "";
     margin-left: @timeline-icon-radius - @timeline-end-size / 2 + @timeline-line-width / 2;
@@ -22,8 +24,8 @@
 .timeline {
     padding-top: @timeline-icon-overlap + @timeline-item-size / 2;
     padding-left: @timeline-item-size;
-    border-left: @timeline-line-width solid @text-color;
-    margin: 0 0 0 @timeline-icon-radius;
+    //border-left: @timeline-line-width solid @text-color;
+    //margin: 0 0 0 @timeline-icon-radius;
 }
 
 .timeline li {
@@ -35,16 +37,17 @@
 }
 
 .timeline-title {
-    margin: 0 0 0 -@timeline-item-size;
+    display: block;
     padding: @timeline-item-padding/2 @padding-small-horizontal @timeline-item-padding/2 @timeline-item-size;
     color: white;
-    background-color: @text-color;
+    background-color: @time-line-color;
     border-radius: @border-radius-large;
     font-weight: normal;
     font-size: @font-size-base;
     // hack: make floating boxes align vertically
     line-height: @line-height-large;
     .float-container();
+    margin-bottom: @timeline-title-padding;
 }
 
 .timeline-item::before {
@@ -54,10 +57,6 @@
 
 .timeline-content {
     margin: 0;
-
-    @media (max-width: @screen-xs-max) {
-      margin-left: -@padding-small-horizontal;
-    }
 }
 
 .set-timeline-icon(@item-name, @content) {

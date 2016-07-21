@@ -1,5 +1,6 @@
 //== Colors
 @text-color: @dark-color;
+@time-line-color:@light-teal;
 @bg-color: @light-color;
 @light-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
 
@@ -10,7 +11,7 @@
 @font-family-monospace:  Monaco, Consolas, "Courier New", monospace;
 @font-family-serif:      Georgia, "Times New Roman", Times, serif;
 
-@font-size-base:  16px;
+@font-size-base:  1rem;
 @font-size-huge: @font-size-base * 2;
 @font-size-large: @font-size-base * 1.25;
 @font-size-medium: @font-size-base * 1.125;
@@ -96,11 +97,11 @@
 @padding-large-vertical: 10px;
 @padding-large-horizontal: 16px;
 
-@padding-huge-vertical: 14px;
+@padding-huge-vertical: 1rem;
 @padding-huge-horizontal: 20px;
 
 @padding-small-vertical: 5px;
-@padding-small-horizontal: 10px;
+@padding-small-horizontal: 1rem;
 
 @padding-xs-vertical: 1px;
 @padding-xs-horizontal: 5px;
@@ -120,19 +121,28 @@
 
 @border-divide: 2px solid @text-color;
 
+//== Article
+@article-botton:2rem;
+
 //== Section
 @sec-icon-size: 32px;
 @sec-icon-padding: 6px;
+@sec-content-padding-sm:1.5rem;
+@sec-content-padding-md:(@sec-content-padding-sm * 2);
+@sec-timeline-padding: 0.25rem;
+@sec-botton-padding:1rem;
 
 
 //== Timeline
 @timeline-icon-overlap: (@sec-icon-size + @sec-icon-padding) / 2 + 10px;
 @timeline-icon-radius: (@sec-icon-size) / 2 + @sec-icon-padding;
+@timeline-title-padding: 1.5rem;
 @timeline-item-size: 26px;
 @timeline-item-padding: 6px;
 @timeline-content-padding: 16px;
 @timeline-end-size: 14px;
 @timeline-line-width: 4px;
+@timeline-wrapper-margin:1rem;
 
 //== Progress
 @progress-fill-color: @bright-color;
@@ -140,3 +150,9 @@
 @progress-label-color: white;
 
 //== Sidebar
+
+//== Tags
+@tags-padding:0.4rem;
+@tags-marging:@tags-padding*2.5;
+@tags-border-radius:@tags-padding;
+@tags-line-height:@tags-padding*3 + @line-height-base;

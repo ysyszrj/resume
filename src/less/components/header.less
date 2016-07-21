@@ -13,10 +13,9 @@ header {
 }
 
 .title {
-    float: right;
+    float: left;
     text-align: right;
     margin: 0;
-
     @media screen and (max-width: @screen-xs-max) {
       float: none;
       text-align: center;
@@ -44,14 +43,16 @@ header {
 }
 
 address {
+    float: right;
     .float-container();
+    margin-top: @padding-huge-vertical;
 }
 
 header .contact {
     float: left;
     margin: 0;
-    padding-left: @padding-large-horizontal;
-    @media print or (max-width: @screen-xs-max) {
+    //padding-left: @padding-large-horizontal;
+    @media print and (min-width: @screen-md-min) {
       float: none;
       margin-top: @padding-large-vertical;
       padding-left: @padding-xs-horizontal;
@@ -64,6 +65,9 @@ header .contact li {
     line-height: 1.4;
     font-size: @font-size-medium;
     word-break: break-all;
+    @media print and(max-width: @screen-sm-max){
+         width: 25%;
+    }
 }
 
 header a:link, header a:visited {
@@ -71,12 +75,14 @@ header a:link, header a:visited {
 }
 
 header a:hover, header a:active {
-    color: @secondary-light-color;;
+    color: @secondary-light-color;
 }
 
-.set-li-icon(contact-phone, @fa-var-phone);
-.set-li-icon(contact-email, @fa-var-envelope);
-.set-li-icon(contact-github, @fa-var-github-square);
-.set-li-icon(contact-sinaweibo, @fa-var-weibo);
-.set-li-icon(contact-blog, @fa-var-rss);
-.set-li-icon(contact-wechat, @fa-var-wechat);
+//.title, address{
+//    margin-left: @padding-huge-horizontal;
+//    margin-right: @padding-huge-horizontal;
+//}
+.set-li-icon(contact_e-mail, @fa-var-envelope);
+.set-li-icon(contact_github, @fa-var-github-square);
+.set-li-icon(contact_blog, @fa-var-rss);
+.set-li-icon(contact_works, @fa-var-newspaper-o);
