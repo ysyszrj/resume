@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="less/index.css">
+    <link rel="stylesheet" href="index.css">
     <title>简历</title>
 </head>
 <body>
-<main id="app" class="container">
+<main id="app" class="container" v-cloak>
     <header class="row">
         <section class="title">
             <h1>{{resume.name}}</h1>
@@ -102,6 +102,6 @@
 </main>
 <footer>This resume is generated with Webpack, Less and Vue.js by ysyszrj's resume generator.
 </footer>
-<script src="../bin/app.bundle.js"></script>
+<script src="out.js"></script>
 </body>
 </html>
