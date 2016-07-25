@@ -3,86 +3,82 @@
  */
 var gulp = require('gulp');
 var webpack = require('webpack-stream');
-var path = require("path");
 var plugins = require('gulp-load-plugins')();
+var gls = require("gulp-live-server");
+
+var dist_path = './bin/';
+var src_path = './src/';
+var less_files = src_path + "index.less";
+var html_files = src_path + "index.html";
+var js_entry_files = src_path + "main.js";
+var js_out_file_name = "out.js";
+
+var remoteUrl = "git@github.com:ysyszrj/resume.git"
+
+var server = gls.static(dist_path, 8000);
 
 
-var lessPath = [path.join(__dirname, 'src', 'less', 'includes'),
-    path.join(__dirname, 'src', 'less', 'components')];
-
-function less2css(srcPath, destPath, debug) {
-    if(!debug) {
-        return gulp.src(srcPath)
-            .pipe(plugins.less({ paths: lessPath }))
-            .pipe(plugins.minifyCss({ compatibility: 'ie9' }))
-            .pipe(gulp.dest(destPath));
-    } else {
-        return gulp.src(srcPath)
-            .pipe(plugins.sourcemaps.init())
-            .pipe(plugins.less({ paths: lessPath }))
-            .pipe(plugins.sourcemaps.write())
-            .pipe(gulp.dest(destPath));
-    }
-}
-
-
-gulp.task("build-for-deploy",function(){
-
-});
-
-
-gulp.task("less-debug",function(){
-   less2css('./src/less/index.less',"./bin/",true)
-});
-
-
-gulp.task("less",function(){
-    //less2css('./src/less/index.less',"./bin/")
-    return gulp.src("./src/index.less")
+gulp.task("less", function () {
+    return gulp.src(less_files)
         .pipe(plugins.less())
         .pipe(plugins.autoprefixer({
-            browers:["> 5%"],
-            cascade:true
+            browers: ["> 5%"],
+            cascade: true
         }))
+        .pipe(gulp.dest(src_path))
         .pipe(plugins.cleanCss())
-        .pipe(gulp.dest("./bin"));
+        .pipe(gulp.dest(dist_path));
 });
 
 
-gulp.task("html",function(){
-    return gulp.src("./src/index.html")
+gulp.task("html", function () {
+    return gulp.src(html_files)
         .pipe(plugins.htmlmin({
-            collapseWhitespace:true
+            collapseWhitespace: true
         }))
-        .pipe(gulp.dest("./bin"));
+        .pipe(gulp.dest(dist_path));
 });
 
 
-gulp.task("js",function(){
-    gulp.src("./src/main.js")
-        //.pipe(webpack())
+gulp.task("js", function () {
+    gulp.src(js_entry_files)
         .pipe(webpack({
-            watch:false,
-            output:{
-                filename:'out.js'
+            watch: false,
+            output: {
+                filename: js_out_file_name
             }
         }))
         .pipe(plugins.uglify())
-        .pipe(gulp.dest("./bin/"))
+        .pipe(gulp.dest(dist_path))
 });
 
+/**************** Build ***************/
 
-gulp.task("build",["less","html","js"]);
+gulp.task("build", ["less", "html", "js"]);
+
+gulp.task("server", ["build"], function () {
+    server.start();
+})
 
 
 /***************  Deploy **************/
-gulp.task("deploy",function(){
-    return gulp.src('./bin/**/*')
+gulp.task("deploy", function () {
+    return gulp.src(dist_path + '**/*')
         .pipe(plugins.ghPages({
-            remoteUrl:"git@github.com:ysyszrj/resume.git"
+            remoteUrl: remoteUrl
         }));
 });
 
+/**************** Watch *****************/
+gulp.task('watch', ['server'], function () {
+    gulp.watch([src_path + '**/*.less'],
+        ['less']);
+    gulp.watch([src_path + '**/*.js', 'resume.json'], ['js']);
+    gulp.watch(src_path + 'index.html', ['html']);
+    gulp.watch(dist_path + '**/*', function () {
+        server.notify.apply(server, arguments);
+    });
+});
 
 
-gulp.task("default",['build']);
+gulp.task("default", ['build']);
