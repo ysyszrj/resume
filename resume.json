@@ -69,7 +69,9 @@
           "webpack",
           "Less",
           "Vue.js"
-        ]
+        ],
+        "demo":"https://ysyszrj.github.io/resume/",
+        "github":""
       },
       {
         "type": "project",
@@ -114,7 +116,8 @@
           "聚类",
           "Vue.js",
           "Word2Vec"
-        ]
+        ],
+        "demo":""
       }
     ],
     "skills": [
@@ -125,20 +128,27 @@
           {
             "class": "HTML/CSS",
             "description": [
-              "了解语义化HTML，模块化CSS",
-              "了解Less"
+              "能够编写语义化HTML，模块化CSS",
+              "了解Less并在工程中使用"
             ]
           },
           {
             "class": "JavaScript",
             "description": [
-              ""
+              "了解JavaScript语言特性，原型，继承",
+              "了解模块化编程思想"
+            ]
+          },
+          {
+            "class": "DOM编程",
+            "description": [
+              "掌握常用的DOM模块API"
             ]
           },
           {
             "class": "前端框架",
             "description": [
-              "能够利用Vue.js进行单页应用开发"
+              "能够利用Vue.js进行单页应用开发，了解Vue渲染"
             ]
           }
         ]
@@ -151,11 +161,11 @@
             "class": "编程语言",
             "description": [
               "能够快速适应不同的编程语言",
-              "了解C++，写过简单图形学算法",
-              "了解JAVA，参与合作，能够简单地",
-              "Matlab实现过简单的机器学习算法进行数据分析",
-              "Processing写过可视化应用",
-              "熟悉Python，写过自然语言处理相关应用"
+              "了解C++，实现过简单图形学算法，MFC语音识别相关应用开发",
+              "了解JAVA，利用Swing和Mysql写过管理系统，协助参与项目开发",
+              "Matlab实现过简单的机器学习算法并进行数据分析",
+              "Processing实现过可视化应用",
+              "熟悉Python，实现过自然语言处理相关网络应用"
             ]
           },
           {
@@ -164,14 +174,7 @@
               "无障碍阅读英文开发文档",
               "能够进行英文文献阅读",
               "使用Git进行版本控制",
-              "熟悉Photoshop,具备图形图像基础知识"
-            ]
-          },
-          {
-            "class": "工程化",
-            "description": [
-              "无障碍阅读英文开发文档",
-              "能够进行英文文献阅读"
+              "熟悉Photoshop，具备图形图像基础知识"
             ]
           }
         ]

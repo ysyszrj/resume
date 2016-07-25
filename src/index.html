@@ -54,6 +54,7 @@
                 <section class="sec-part" v-for="item in resume.projects">
                     <time class="timeline-title">
                         &nbsp; &nbsp; {{item.start}} ~ {{item.end}}
+                        <a class="demo_link" href="{{item.demo}}" v-if="item.demo">demo</a>
                     </time>
                     <div class="subsec-content">
                         <dl>
@@ -100,7 +101,7 @@
 
 
 </main>
-<footer>This resume is generated with Webpack, Less and Vue.js by ysyszrj's resume generator.
+<footer>This resume is generated with Webpack, Less and Vue.js by <a href="https://github.com/ysyszrj/resume">zrj</a>'s resume generator.
 </footer>
 <script src="out.js"></script>
 </body>
