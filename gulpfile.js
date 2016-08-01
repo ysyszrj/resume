@@ -66,8 +66,12 @@ gulp.task("deploy", function () {
     return gulp.src(dist_path + '**/*')
         .pipe(plugins.ghPages({
             remoteUrl: remoteUrl
+        }))
+        .pipe(plugins.ghPages({
+            remoteUrl: "git@git.coding.net:ysyszrj/resume.git"
         }));
 });
+
 
 /**************** Watch *****************/
 gulp.task('watch', ['server'], function () {
