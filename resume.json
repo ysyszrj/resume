@@ -52,8 +52,8 @@
         "end": "2014"
       }
     ],
-    "projects": [
-      {
+    "open_source":[
+        {
         "type": "project",
         "title": "个人简历",
         "start": "2016.7",
@@ -70,9 +70,66 @@
           "Less",
           "Vue.js"
         ],
-        "demo":"https://ysyszrj.github.io/resume/",
-        "github":""
+          "links":[
+            {
+              "name":"demo",
+              "link":"https://ysyszrj.github.io/resume/"
+            },{
+              "name":"github",
+              "link":"https://github.com/ysyszrj/resume"
+            }
+          ]
       },
+      {
+        "type": "project",
+        "title": "Node爬虫推送邮箱",
+        "start": "2016.8",
+        "end": "2016.8",
+        "link": "",
+        "description": [
+          "利用Node来爬取论坛求职信息并发送给指定邮箱",
+          "利用superagent来抓取网页",
+          "利用cheerio来分析网页",
+          "利用nodemailer来发送邮件(内置QQ邮箱配置)",
+          "尝试利用eventproxy来管理异步"
+        ],
+        "tags": [
+          "Node"
+        ],
+          "links":[
+            {
+              "name":"github",
+              "link":"https://github.com/ysyszrj/Crawler"
+            }
+          ]
+      },{
+        "type":"project",
+        "title":"基于SVG的词云生成插件",
+        "start":"2015.6",
+        "end":"2015.6",
+        "link":"",
+        "description":[
+          "jQuery插件用来生成支持svg的词云",
+          "做了jQuery相关函数的扩展，能够在没有jQuery的情况下正常使用"
+        ],
+        "tags":[
+          "词云",
+          "SVG"
+        ],
+        "links":[
+          {
+            "name":"demo",
+            "link":""
+          },
+          {
+            "name":"github",
+            "link":"https://github.com/ysyszrj/SvgCloud"
+          }
+        ]
+      }
+    ],
+    "projects": [
+
       {
         "type": "project",
         "title": "城市评论主题热力图可视分析系统",
@@ -80,8 +137,8 @@
         "end": "2016.7",
         "description": [
           "利用商家评论数据来分析地理差异性",
-          "Python(Flask)搭建服务器，初步筛选处理数据，对客户端相应",
-          "MongoDB缓存地理数据来帮助优化加速客户端相应速度",
+          "Python(Flask)搭建服务器，初步筛选处理数据，对客户端响应",
+          "MongoDB缓存地理数据来帮助优化加速客户端响应速度",
           "Leaflet.js提供基础的地图库",
           "heatmap.js提供热力图生成接口",
           "自主改进插件来支持更多热力图交互信息",
@@ -98,7 +155,7 @@
       },
       {
         "type": "project",
-        "title": "评论数据的主题挖掘以及可视化",
+        "title": "评论数据的主题挖掘以及聚类可视化",
         "start": "2016.1",
         "end": "2016.5",
         "description": [
@@ -116,8 +173,7 @@
           "聚类",
           "Vue.js",
           "Word2Vec"
-        ],
-        "demo":"http://ysyszrj.coding.me/sentence_analyse_demo/"
+        ]
       }
     ],
     "skills": [
@@ -128,21 +184,24 @@
           {
             "class": "HTML/CSS",
             "description": [
-              "能够编写语义化HTML，模块化CSS",
-              "了解Less并在工程中使用"
+              "能够编写语义化HTML",
+              "仿照Bootstrap编写模块化LESS"
             ]
           },
           {
             "class": "JavaScript",
             "description": [
-              "了解JavaScript语言特性，原型，继承",
-              "了解模块化编程思想"
+              "了解JavaScript语言特性",
+              "了解并运用模块化编程思想",
+              "熟悉D3.js可视化框架",
+              "熟悉MVVM框架Vue.js"
             ]
           },
           {
             "class": "DOM编程",
             "description": [
-              "掌握常用的DOM模块API"
+              "掌握常用的DOM模块API",
+              "了解Jquery.js，开发过jquery Plugin"
             ]
           },
           {
