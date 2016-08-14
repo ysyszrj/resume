@@ -42,7 +42,7 @@
 
 .calc-grid-column(@index) when (@index <= @grid-columns-breakpoint) {
     .column-@{index} {
-        @media print or (max-width: @grid-float-breakpoint) {
+        @media print and (max-width: @grid-float-breakpoint) {
           width: percentage((@index / @grid-columns-breakpoint));
         }
     }

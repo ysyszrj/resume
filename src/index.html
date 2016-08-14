@@ -76,6 +76,39 @@
             </div>
         </article>
 
+
+        <article class="open_source">
+            <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">个人开源</span><span
+                    class="sec-title-en">Open Source</span></h3></div>
+            <div class="sec-content">
+                <section class="sec-part" v-for="item in resume.open_source">
+                    <time class="timeline-title">
+                        &nbsp; &nbsp; {{item.start}} ~ {{item.end}}
+                        <a class="demo_link" href="{{link_entity.link}}" v-for="link_entity in item.links">{{link_entity.name}}</a>
+
+                    </time>
+                    <div class="subsec-content">
+                        <dl>
+                            <dt class="item-summary">{{item.title}} </dt>
+                            <dd class="experience-task" v-for="des in item.description">
+                                {{des}}
+                            </dd>
+                        </dl>
+                        <div class="tags">
+
+                             <a class="tag" v-for="tag in item.tags">
+                                {{tag}}
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </section>
+            </div>
+        </article>
+
+
         <article class="skills">
             <div class="sec-title-wrapper"><h3 class="sec-title"><span class="sec-title-ch">个人技能</span><span
                     class="sec-title-en">Skills</span></h3></div>
@@ -96,10 +129,7 @@
                 </section>
             </div>
         </article>
-
     </div>
-
-
 </main>
 <footer>This resume is generated with Webpack, Less and Vue.js by <a href="https://github.com/ysyszrj/resume">zrj</a>'s resume generator.
 </footer>
