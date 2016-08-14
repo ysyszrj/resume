@@ -79,9 +79,11 @@ gulp.task('watch', ['server'], function () {
         ['less']);
     gulp.watch([src_path + '**/*.js', 'resume.json'], ['js']);
     gulp.watch(src_path + 'index.html', ['html']);
+
     gulp.watch(dist_path + '**/*', function () {
         server.notify.apply(server, arguments);
     });
+
 });
 
 
